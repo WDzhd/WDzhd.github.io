@@ -37,6 +37,7 @@
 
 
 
+
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -309,6 +310,7 @@
 
 </header>
 
+	
     <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
@@ -749,7 +751,16 @@ $(function () {
     
 
     
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
 
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
     
 
     
@@ -759,7 +770,38 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
-
+	<div id="weather-v2-plugin-simple"></div>
+<script>
+WIDGET = {
+  CONFIG: {
+    "modules": "01234",
+    "background": 1,
+    "tmpColor": "FFFFFF",
+    "tmpSize": 16,
+    "cityColor": "FFFFFF",
+    "citySize": 16,
+    "aqiSize": 16,
+    "weatherIconSize": 24,
+    "alertIconSize": 18,
+    "padding": "10px 10px 10px 10px",
+    "shadow": "1",
+    "language": "auto",
+    "borderRadius": 5,
+    "fixed": "false",
+    "vertical": "middle",
+    "horizontal": "center",
+    "key": "kWIFQjmWx3"
+  }
+}
+</script>
+<script src="https://apip.weatherdt.com/simple/static/js/weather-simple-common.js?v=2.0"></script>
 </body>
+<script type="text/javascript">
+//只在桌面版网页启用特效
+var windowWidth = $(window).width();
+if (windowWidth > 768) {
+    document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+}
+</script>
 
 </html>
